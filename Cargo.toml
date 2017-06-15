@@ -1,0 +1,6 @@
+[package]
+name = "rustpiglatin"
+version = "0.1.0"
+authors = ["Alex Story <astory11@yahoo.com>"]
+
+[dependencies]

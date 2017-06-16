@@ -6,18 +6,8 @@ pub fn run(words: String) -> String {
 
 fn is_lead_vowel(word: &String) -> bool {
     let vowels = String::from("aeiou");
-    let mut found = false;
-    match word.chars().next() {
-        None => panic!("Empty String!"),
-        Some(x) => {
-            for c in vowels.chars() {
-                if c == x {
-                    found = true
-                    }
-            }
-        }
-    }
-    found
+    let first: String = word.chars().take(1).collect();
+    vowels.chars().any(|x| x.to_string() == first)
 }
 
 fn handle(word: String) -> String {

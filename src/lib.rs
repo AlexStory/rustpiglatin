@@ -4,7 +4,7 @@ pub fn run(words: String) -> String {
     res.join(" ")
 }
 
-pub fn is_lead_vowel(word: &String) -> bool {
+fn is_lead_vowel(word: &String) -> bool {
     let vowels = String::from("aeiou");
     let mut found = false;
     match word.chars().next() {

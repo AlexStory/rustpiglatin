@@ -7,9 +7,7 @@ pub fn run(words: String) -> String {
 }
 
 fn is_lead_vowel(word: &String) -> bool {
-    let vowels = String::from("aeiou");
-    let first = first_letter(&word);
-    vowels.chars().any(|x| x.to_string() == first)
+    "aeiou".chars().any(|x| x.to_string() == first_letter(&word))
 }
 
 fn handle(word: String) -> String {

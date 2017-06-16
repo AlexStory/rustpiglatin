@@ -6,5 +6,5 @@ fn main() {
     println!("Please enter input to be pigified.");
     let mut input = String::new();
     stdin().read_line(&mut input).expect("failed to get input");
-    println!("Your input was {}", rpl::run(input.trim().to_string()));
+    println!("{}", rpl::run(input.trim().to_string()));
 }

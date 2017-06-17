@@ -11,11 +11,9 @@ fn is_lead_vowel(word: &String) -> bool {
 }
 
 fn parse_word(word: String) -> String {
-    if is_lead_vowel(&word) {
-        format!("{}-yay", &word)
-    } else {
-        let first = first_letter(&word);
-        format!("{}{}ay", &word[1..], first)
+    match is_lead_vowel(&word) {
+        true => format!("{}-yay", &word),
+        false => format!("{}{}ay", &word[1..], first_letter(&word))
     }
 }
 
